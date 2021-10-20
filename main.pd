@@ -1,0 +1,5 @@
+#N canvas 394 112 801 371 12;
+#X declare -path ../lib;
+#X declare -path ../abstractions;
+#X obj 509 33 declare -path ../lib;
+#X obj 509 58 declare -path ../abstractions;
