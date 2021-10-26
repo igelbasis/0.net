@@ -1,0 +1,15 @@
+#N canvas 468 166 578 271 12;
+#X text 239 34 Arguments:;
+#X text 238 55 1)...use \$0 for global access \; 2)...portnumber \;
+3)...all data will be sent to \$1-\$2 \; .....e.g. \$0-net_out (in
+the parentpatch), f 42;
+#X floatatom 138 97 5 0 0 0 - - -;
+#X obj 138 146 s \$0-net_send;
+#X obj 40 98 r \$0-net_out;
+#X msg 138 121 send foo \$1;
+#X obj 40 123 print;
+#X obj 54 43 net_in \$0 9119 net_out;
+#X obj 41 67 net_out \$0 9119 net_send;
+#X connect 2 0 5 0;
+#X connect 4 0 6 0;
+#X connect 5 0 3 0;
